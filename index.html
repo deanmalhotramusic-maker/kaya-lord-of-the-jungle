@@ -9,6 +9,11 @@
 <meta name="description" content="Kaya: Lord of the Jungle. Fight five jungle bosses in your browser.">
 <title>Kaya: Lord of the Jungle</title>
 <link rel="icon" href="favicon.ico">
+<!-- Rewarded ads (watch an ad to revive). After your AdSense account is approved for H5 games ads,
+     uncomment these lines and put your publisher ID (ca-pub-...) in both places:
+<script async data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-frequency-hint="30s" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script>window.adsbygoogle = window.adsbygoogle || []; var adBreak = adConfig = function (o) { adsbygoogle.push(o); }; adConfig({ preloadAdBreaks: "on" });</script>
+-->
 <style>
   html, body { margin: 0; height: 100%; background: #0b1a0e; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; }
   #game { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; display: block; background: #0b1a0e; }
@@ -57,7 +62,8 @@
       var n = Math.round(p * 100);
       document.getElementById('fill').style.width = n + '%';
       document.getElementById('pct').textContent = (n < 90 ? 'Loading the jungle... ' : 'Waking the beasts... ') + n + '%';
-    }).then(function () {
+    }).then(function (inst) {
+      window.kayaUnity = inst; // lets the ad system send results back to the game
       document.getElementById('loader').style.display = 'none';
     }).catch(function (e) {
       var el = document.getElementById('err'); el.style.display = 'block';
