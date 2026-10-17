@@ -12,6 +12,6 @@ A 3D jungle action game made with Unity 6. Kaya, raised by apes, walks through f
 
 Works in desktop and phone browsers. On a phone, turn it sideways. You get a joystick plus HIT, SPEAR, JUMP, ROLL, BLOCK and ROAR buttons.
 
-**Keyboard:** WASD move, mouse look, Shift sprint, Space jump (press twice for a double jump), left click / J attack, K spear, right click / Q block (tap just before a hit to parry), Ctrl / L roll, R roar, Tab lock-on, Esc pause.
+**Keyboard:** WASD move, mouse look, Shift sprint, Space jump (press twice for a double jump), left click / J attack, K arrow, right click / Q block (tap just before a hit to parry), C / L roll, R Jungle Fury, Tab lock-on, P pause.
 
 Credits (CC0): character and animations by Quaternius; textures and sky by Poly Haven.
